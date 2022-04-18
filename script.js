@@ -52,6 +52,14 @@
     submitAlert(form16);
     const form17 = document.getElementById('my-form18');
     submitAlert(form17);
+    const form18 = document.getElementById('my-form19');
+    submitAlert(form18);
+    const form19 = document.getElementById('my-form20');
+    submitAlert(form19);
+    const form20 = document.getElementById('my-form21');
+    submitAlert(form20);
+    const form21 = document.getElementById('my-form22');
+    submitAlert(form21);
 //   });
 
 
@@ -102,6 +110,10 @@
     var img16 = document.getElementById("myImg16");
     var img17 = document.getElementById("myImg17");
     var img18 = document.getElementById("myImg18");
+    var img19 = document.getElementById("myImg19");
+    var img20 = document.getElementById("myImg20");
+    var img21 = document.getElementById("myImg21");
+    var img22 = document.getElementById("myImg22");
 
 const openImg = (x) => {
     x.onclick = function(){
@@ -127,6 +139,10 @@ openImg(img15);
 openImg(img16);
 openImg(img17);
 openImg(img18);
+openImg(img19);
+openImg(img20);
+openImg(img21);
+openImg(img22);
 
 
 // Popup View Bid Modal
@@ -422,5 +438,69 @@ closeBids18.onclick = function() {
 window.onclick = function(event) {
     if (event.target == viewBids18) {
     viewBids18.style.display = "none";
+    }
+}
+
+// get Modal: item 19
+var viewBids19 = document.getElementById("view-bids19");
+var btn18 = document.getElementById("btn19");
+var closeBids19 = document.getElementsByClassName("close-bids")[18];
+btn18.onclick = function() {
+    viewBids19.style.display = "block";
+}
+closeBids19.onclick = function() {
+    viewBids19.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == viewBids19) {
+        viewBids19.style.display = "none";
+    }
+}
+
+// get Modal: item 20
+var viewBids20 = document.getElementById("view-bids20");
+var btn20 = document.getElementById("btn20");
+var closeBids20 = document.getElementsByClassName("close-bids")[19];
+btn18.onclick = function() {
+    viewBids20.style.display = "block";
+}
+closeBids20.onclick = function() {
+    viewBids20.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == viewBids20) {
+    viewBids20.style.display = "none";
+    }
+}
+
+// get Modal: item 21
+var viewBids21 = document.getElementById("view-bids21");
+var btn21 = document.getElementById("btn21");
+var closeBids21 = document.getElementsByClassName("close-bids")[20];
+btn21.onclick = function() {
+    viewBids21.style.display = "block";
+}
+closeBids21.onclick = function() {
+    viewBids21.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == viewBids21) {
+    viewBids21.style.display = "none";
+    }
+}
+
+// get Modal: item 22
+var viewBids22 = document.getElementById("view-bids22");
+var btn22 = document.getElementById("btn22");
+var closeBids22 = document.getElementsByClassName("close-bids")[21];
+btn22.onclick = function() {
+    viewBids22.style.display = "block";
+}
+closeBids22.onclick = function() {
+    viewBids22.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == viewBids22) {
+    viewBids22.style.display = "none";
     }
 }
