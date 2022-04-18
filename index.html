@@ -3,57 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' ; object-src 'none'; script-src 'self'; style-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"> -->
     <link rel="stylesheet" href="style.css">
-    <title>Web Layout</title>
+    <title>ISB MS Silent Auction</title>
 </head>
-<body>
-    <!-- <div>
-        <nav>
-            <ul class="cny-main-nav sticky">
-                <li><a  class="cny-nav-link" href="">Home</a></li>
-                <li><a  class="cny-nav-link" href="">Teams</a></li>
-                <li><a class="cny-nav-link" href="">Fixtures</a></li>
-                <li><a class="cny-nav-link" href="">Search</a></li>
-                <li class="nav-right"><a class="cny-nav-link" href="">Contacts</a></li>
-            </ul>
-        </nav>
-    </div> -->
-    
-<div class="cover"><img class="bg-img" src="./ISBCommunity.jpeg" alt=""><h1 class="cover-heading">Welcome to ISB MS Silent Auction 2022</h1></div>
+<body>    
+<div class="cover"><img class="bg-img" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/c37d9a62-64fc-417e-b8d7-ba9117bf86f1" alt=""><h1 class="cover-heading">Welcome to ISB MS Silent Auction 2022</h1></div>
+  <div style="padding: 10px; text-align:center; color: #000d4d;">
+    <h1>Come back Monday morning!</h1>
+  </div>
+
     <div class="grid-layout">
         <!-- Item 1 -->
         <div class="box">
-          <img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt="">
-          <h3>Item 1</h3>
-            <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbzDUfdeUGzof6WSzL3uHFv99H9tLthVXdX8ZsOYv3gTbqyF9A5ogYXHO30tG651eQEVEw/exec" 
-          >
+          <img class="hoverImg" id="myImg" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/75b0d1ba-731b-4692-ad01-ee427bca33bf" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;">Statue Photograph: 150RMB</div> -->
+          </div>
+          <h3>Statue Photograph: 150RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->     
+           <!-- View Bids Modal -->
+          <button id="btn">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1GKJB8Lt-gsZ_pbpWIHf75r838RQVDBgLz23JofTBnzY/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1GKJB8Lt-gsZ_pbpWIHf75r838RQVDBgLz23JofTBnzY/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div>
+          <!-- Form -->
+          <form id="my-form" method="POST"  action="http://script.google.com/macros/s/AKfycbzDUfdeUGzof6WSzL3uHFv99H9tLthVXdX8ZsOYv3gTbqyF9A5ogYXHO30tG651eQEVEw/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form>
         </div>
 
         <!-- **************************************************************** -->
         <!-- Item 2 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 2</h3>
-            <form 
-            id="my-form2"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbxcGDCVU_JRFJbvgsr2lJyjpiQ2k4ZaCm91ZDvge3Y2_MMwIGVR7xPr7OuRcc_3Kt4/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg2" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/fc3c3c5d-60c9-4410-bc80-446fd7c929c8" alt="">
+          <!-- The Modal -->
+          <div id="myModal2" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;">Happy Holidays Painting: 50RMB</div> -->
+          </div>
+
+          <h3>Happy Holidays Painting: 50RMB</h3>
+          <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn2">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1s08JccC8-__BzZxoZspyh1138WzbYjQ3ysbO7-rp41I/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids2" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px;" scroll="yes" src="https://docs.google.com/spreadsheets/d/1s08JccC8-__BzZxoZspyh1138WzbYjQ3ysbO7-rp41I/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div>
+          <form id="my-form2" method="POST" action="http://script.google.com/macros/s/AKfycbxcGDCVU_JRFJbvgsr2lJyjpiQ2k4ZaCm91ZDvge3Y2_MMwIGVR7xPr7OuRcc_3Kt4/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li><input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li><input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li><input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li><button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li><input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li><button type="submit">Submit Bid</button></li>
           </ul>
             </form>
         </div>
@@ -61,155 +90,570 @@
 
         <!-- **************************************************************** -->
         <!-- Item 3 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 3</h3><form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg3" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/2326c675-6d62-474b-b702-d03e6e0d9ba6" alt="">
+          <!-- The Modal -->
+          <div id="myModal3" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;">Inner Mongolian Grassland Photograph: 100RMB</div> -->
+          </div>
+          <h3>Inner Mongolian Grassland Photograph: 100RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+            <!-- View Bids Modal -->
+            <button id="btn3">View Current Hightest Bid</button>
+            <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1oyQQF_N9KrDrxRYxoLmar9gBKxg9xlGLXnTKWACXgpY/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+            <!-- The Modal -->
+            <div id="view-bids3" class="bids">
+              <!-- Modal content -->
+              <div class="bids-content">
+                <span class="close-bids">&times;</span>
+                <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1oyQQF_N9KrDrxRYxoLmar9gBKxg9xlGLXnTKWACXgpY/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+              </div>
+            </div>
+
+            <form id="my-form3" method="POST"  action="http://script.google.com/macros/s/AKfycbyHfXoHhwuU8Tca5u16F7Hesd7_isNcejhwSzKEpKZJBG_nUKnRRSCI0LX8p55RwwuAfQ/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
 
         <!-- **************************************************************** -->
         <!-- Item 4 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 4</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg4" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/6150d123-1d25-44e7-be6e-e0753d389b3a" alt="">
+          <!-- The Modal -->
+          <div id="myModal4" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Great Wall of China Design: 75 RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn4">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1cjLKtDV9LB6iEwy1LV75iUplPn1f1p_J-DRUthFa3l0/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids4" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1cjLKtDV9LB6iEwy1LV75iUplPn1f1p_J-DRUthFa3l0/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form4" method="POST"  action="http://script.google.com/macros/s/AKfycbzv7dTnp9s2LHpilz5TMsL1QMCXhcLkY_r4WMcF0L0Jnrdp-uXIkxk9xG07Uby9atBJYw/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
 
         <!-- **************************************************************** -->
         <!-- Item 5 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 5</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg5" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/49e72a6c-753b-4b49-aad0-10821c052e2c" alt="">
+          <!-- The Modal -->
+          <div id="myModal5" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Beijing Blue Photograph: 90 RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+           <!-- View Bids Modal -->
+           <button id="btn5">View Current Hightest Bid</button>
+           <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1Gb9RBXdp6fWn1F8At8bj4ppoE2qoxmFro0lz-g-t0tE/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+           <!-- The Modal -->
+           <div id="view-bids5" class="bids">
+             <!-- Modal content -->
+             <div class="bids-content">
+               <span class="close-bids">&times;</span>
+               <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1Gb9RBXdp6fWn1F8At8bj4ppoE2qoxmFro0lz-g-t0tE/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+             </div>
+            </div>
+
+            <form id="my-form5" method="POST"  action="http://script.google.com/macros/s/AKfycbyl4w6XipOephGgR5La1MvLAhzbRdefbx9ZHunn9E2Ruv2_nzEfntclTacExENWHNEn/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
 
         <!-- **************************************************************** -->
         <!-- Item 6 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 6</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg6" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/2fbc4abd-61ce-445d-8677-77f8a062ac7c" alt="">
+          <!-- The Modal -->
+          <div id="myModal6" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Field of Flowers Photograph: 120RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn6">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1rt5OiKs92PNrMPxz1qTC6FdzHQtrq6apyB7Du9t3Nxc/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids6" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1rt5OiKs92PNrMPxz1qTC6FdzHQtrq6apyB7Du9t3Nxc/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+            </div>
+
+            <form id="my-form6" method="POST"  action="http://script.google.com/macros/s/AKfycbzVkc4n3Fh0s4rW7IyKhhYJvhbh8xodIc9mKwRnJPLnyJn3Z0m56JlJ9Atb6h59QJ1i/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
 
         <!-- **************************************************************** -->
         <!-- Item 7 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 7</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg7" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/dd932dde-7762-48e2-8c63-3e0f48ff0dfb" alt="">
+          <!-- The Modal -->
+          <div id="myModal7" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Fan Calligraphy: 50RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn7">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1lfRjppcket52Nkq8eupPR1nrTMmcoD0tgzgP8oSQ55o/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids7" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1lfRjppcket52Nkq8eupPR1nrTMmcoD0tgzgP8oSQ55o/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form7" method="POST"  action="http://script.google.com/macros/s/AKfycbyCLoyAUDidCC8wqrxsth2FcLAVtvNC_Y2d3THfyBV7h7MO0yDnW1PKdGH2bum4IuQK/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
 
         <!-- **************************************************************** -->
         <!-- Item 8 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 8</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg8" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/94bf0f91-745d-45df-bb04-ca79dee31ac7" alt="">
+          <!-- The Modal -->
+          <div id="myModal8" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Abstract Art Painting: 75 RMB</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn8">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1439OXq-6FaOTO0iyG6laVfploBPYBNDHluv1m8M8PiE/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids8" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1439OXq-6FaOTO0iyG6laVfploBPYBNDHluv1m8M8PiE/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form8" method="POST"  action="http://script.google.com/macros/s/AKfycbzaZN4Ovn6NOrbrgF79oLIBd1t3fKoKadvBzTvejIChUka-pUPCdslmQbKKyR4gKVXyJg/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
             </form></div>
 
         
         <!-- **************************************************************** -->
         <!-- Item 9 -->
-        <div class="box"><img src="https://i.insider.com/5e38419b5bc79c4c7d4e1192?width=906&format=jpeg" alt=""><h3>Item 9</h3>  <form 
-            id="my-form"
-            method="POST" 
-            action="https://script.google.com/macros/s/AKfycbw023ZEKdUE5wAMHxatiJwP2E_tZzBb8qL_9wlhy50RGgsSgbrF-JYy5s98ERwSkSbw/exec" 
-          >
+        <div class="box">
+          <img class="hoverImg" id="myImg9" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/c186423e-29de-4488-875c-208519a56081" alt="">
+          <!-- The Modal -->
+          <div id="myModal9" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Superficial Smile</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn9">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1OX1GU-jK_t-unB9DPga7rhAgVceB9F-511F9IA3o3RM/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids9" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1OX1GU-jK_t-unB9DPga7rhAgVceB9F-511F9IA3o3RM/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form9" method="POST"  action="http://script.google.com/macros/s/AKfycbwhjHHuI8KqM9qNkT3OGwmu2TatJmSkZMyp3xiv0HltvHEj_iDu3Nq-wd6RyhgB661I/exec">
           <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
             <li>  <input name="Email" type="email" placeholder="Email" required></li>
             <li><input name="First Name" type="text" placeholder="First Name" required></li>
             <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
-            <li>  <input name="BID" type="number" placeholder="Bid RMB" required></li>
-            <li>  <button type="submit">Send</button><button type="submit">View Highest Bid</button></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
           </ul>
-            </form></div>
-    </div>
+            </form>
+          </div>
+
+        <!-- **************************************************************** -->
+        <!-- Item 10 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg10" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/e9747b01-2ca6-411c-a205-d27459e03973" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Park in Spring</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn10">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1caChTO4VLZCsEoqtBCzbvXyXBJHbwXTb2RFOvbKnkW4/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids10" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1caChTO4VLZCsEoqtBCzbvXyXBJHbwXTb2RFOvbKnkW4/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form10" method="POST"  action="http://script.google.com/macros/s/AKfycbwMAucUj_hvLjW8YdbJCHsvOBLLLvmiG1n_wleDQ1be3JZtGjICqPtZe9ikiQW6ba0-/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 11 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg11" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/9354ff10-c47e-4f30-87ca-355b623ebe48" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>CNY Celebrations</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn11">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1YqIZxDETtvUgMBfQieRZGJDgk7PqXVFH39YLp9XxEzA/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids11" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1YqIZxDETtvUgMBfQieRZGJDgk7PqXVFH39YLp9XxEzA/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form11" method="POST"  action="http://script.google.com/macros/s/AKfycbyh7jTyVrlObh0IA7PgWrqVc3-XESxgf31oeBZbo4u0iqKARYa04jXHRjPifJk51GHz/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 12 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg12" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/97c8414c-5d8d-403c-8847-b1056170f0f3" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Traditional Chinese Rooftop</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn12">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1tXmwDjZ1KxNHdYfV8T4gqzYkt_38YTHqjPQ9xBeIXPI/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids12" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1tXmwDjZ1KxNHdYfV8T4gqzYkt_38YTHqjPQ9xBeIXPI/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form12" method="POST"  action="http://script.google.com/macros/s/AKfycbwOtFTB1TmgLTyUo1DrgAUeKx62w924TR-s86v-eOnPUegtVgEFl__O1vBVcEJbl1iLOw/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 13 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg13" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/1bdfa34b-d9d8-40ec-8447-5c3f5fcb0bb0" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Great Wall in Spring</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn13">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1sP7SwCiV4rB_0KGmAsvnEbLL_VZ79zQ0HbW2JGEp4jQ/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids13" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1sP7SwCiV4rB_0KGmAsvnEbLL_VZ79zQ0HbW2JGEp4jQ/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form13" method="POST"  action="http://script.google.com/macros/s/AKfycbxf8l2DGchF5YLp19AmNKH_ci2eWQPdo2nyO0aQ_rQ9LY7hhHrfUWSy1MVywyAN4qtDhw/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 14 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg14" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/8fd2140b-42de-4f62-afeb-dcbf6acd56c3" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Great Wall in Winter</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn14">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1p5xsW6otnjVAknAmHskN4Qp-lF31T8Xw-o9mNiQO8mA/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids14" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1p5xsW6otnjVAknAmHskN4Qp-lF31T8Xw-o9mNiQO8mA/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form14" method="POST"  action="http://script.google.com/macros/s/AKfycbxaAiHqlzidPM8MLPE8KBMhCRpenrAZ6IQXiPokfoyBWDQHkD_GY_FlUsez8TL5XTgp/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 15 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg15" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/03fdbcf4-ec38-495f-89c6-4d113f4e5446" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Great Wall Interior</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn15">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1Xfwh9if9cQu6d1eP3mNLxUtOQctKHVxvQ76gwYgRDqE/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids15" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1Xfwh9if9cQu6d1eP3mNLxUtOQctKHVxvQ76gwYgRDqE/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form15" method="POST"  action="http://script.google.com/macros/s/AKfycbznzx55QyEtREcHKL6g42SZl5_huniMe8ZQFLwfQkn75T66fhfZHBd3BV3W5ItUdhV0/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+          <!-- **************************************************************** -->
+        <!-- Item 16 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg16" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/6f4a9c84-7b0b-4f39-aef7-72f76b656cd2" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>Chinese Temple</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn16">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1XaYruUj23lbaZB6z-Yix-tgHa8qbWzn1pta4W9Zqfdk/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids16" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1XaYruUj23lbaZB6z-Yix-tgHa8qbWzn1pta4W9Zqfdk/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form16" method="POST"  action="http://script.google.com/macros/s/AKfycbxGyBdqH0cVWxhpQKsZPKJ_ikokz0XEYiavswYy6J3jLev6nAZWgblr5-MqXN9tbDvMyg/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+                    <!-- **************************************************************** -->
+        <!-- Item 17 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg17" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/9e9cb6cb-95cd-4e62-aae1-1909cf43af3d" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>ISB Community</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn17">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/1N1KFWq6Fvj4hKVlIo7E_yq1yiz2n2ZUmiDCYd9W24Ms/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids17" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/1N1KFWq6Fvj4hKVlIo7E_yq1yiz2n2ZUmiDCYd9W24Ms/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form17" method="POST"  action="http://script.google.com/macros/s/AKfycbwzF7Nnv-cVtNdxIzv_hCh9v2l3YePz2r1Q1OH-FXDOpCI8m0lea4JvyOCJDjcd9OAF/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+
+                    <!-- **************************************************************** -->
+        <!-- Item 18 -->
+        <div class="box">
+          <img class="hoverImg" id="myImg18" src="https://www.isb.bj.edu.cn/fs/resource-manager/view/a140c41b-6cb1-401d-9615-c9b7bb405d39" alt="">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <!-- <div class="caption" style="margin-top: 6px;"></div> -->
+          </div>
+          <h3>DIY  Yearbook Page</h3>
+           <!-- <p style="text-align: left; padding: 10px;">Lorem ipsum dolor sit amet. Et eaque numquam et iste sint aut distinctio adipisci. Sit necessitatibus consequatur eos animi reiciendis rem perspiciatis magni qui repudiandae veniam qui voluptas fugit ut omnis amet id sunt nihil.</p> -->
+          <!-- View Bids Modal -->
+          <button id="btn18">View Current Hightest Bid</button>
+          <a class="viewBids-link" href="https://docs.google.com/spreadsheets/d/11TwV4PNW0Iq5qiGJSMBxBzbvSeHihX6FFFCuK6ls06c/edit?usp=sharing" target="_blank">View Bids in a New Tab</a>
+          <!-- The Modal -->
+          <div id="view-bids18" class="bids">
+            <!-- Modal content -->
+            <div class="bids-content">
+              <span class="close-bids">&times;</span>
+              <iframe width="80%" height="500px" scroll="yes" src="https://docs.google.com/spreadsheets/d/11TwV4PNW0Iq5qiGJSMBxBzbvSeHihX6FFFCuK6ls06c/edit?usp=sharing" title="ISB Silent Auction"></iframe>
+            </div>
+          </div> 
+          <form id="my-form18" method="POST"  action="http://script.google.com/macros/s/AKfycbyB8aoDQPcSxp0Sp5V74euy7S5RH2E6VidgBbf_AorDSD6KCOLzw54PuaZlLvHmHsk/exec">
+          <ul class="form-list">
+            <label style="text-align:left;" class="control-label">Bid Form:</label>
+            <li>  <input name="Email" type="email" placeholder="Email" required></li>
+            <li><input name="First Name" type="text" placeholder="First Name" required></li>
+            <li> <input name="Last Name" type="text" placeholder="Last Name" required></li>
+            <li>  <input name="BID (RMB)" type="number" placeholder="Bid RMB" required></li>
+            <li>  <button type="submit">Submit Bid</button></li>
+          </ul>
+            </form>
+          </div>
+        </div>
     
-    <footer>Thank You for Bidding for this Year's ISB MS Slilent Auction</footer>
-
-    <div class="bid-form">
-
+        <footer>Thank You for Bidding for this Year's ISB MS Silent Auction</footer>
       </div>
-      
-<!-- JS -->
-<script type="text/javascript" src="script.js"></script>
-
-<!-- FireBase Script -->
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCo3KjdcDBSl51VX864TXM-qIQ9lmsSUwk",
-    authDomain: "isb-ms-silent-auction.firebaseapp.com",
-    projectId: "isb-ms-silent-auction",
-    storageBucket: "isb-ms-silent-auction.appspot.com",
-    messagingSenderId: "855793156494",
-    appId: "1:855793156494:web:c0efa8aef117ae0c1ae4df",
-    measurementId: "G-84KX62RDRT"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-</body>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html> 
