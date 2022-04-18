@@ -93,6 +93,8 @@ img {
 
 .bg-img {
     opacity: 0.5;
+    height: 50vh;
+    object-fit: cover;
 }
 input {
     width: 200px;
